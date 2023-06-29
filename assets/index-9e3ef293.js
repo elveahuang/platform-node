@@ -1,0 +1,1 @@
+import{j as t,L as r}from"./index-1f5861f5.js";import{D as s}from"./index-b195ba88.js";import"./index-0e8edcb6.js";const i=()=>t.jsxs("div",{className:"text-center",children:[t.jsx(s,{}),t.jsx("br",{}),t.jsx(r,{to:"/about",children:"about"})]});export{i as default};
