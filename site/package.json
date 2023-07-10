@@ -1,0 +1,26 @@
+{
+    "name": "site",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start:dev": "vite --mode development",
+        "start:pro": "vite --mode production",
+        "start:git": "vite --mode github",
+        "build:dev": "vite build --mode development",
+        "build:pro": "vite build --mode production",
+        "build:git": "vite build --mode github"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^20.4.1",
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.25",
+        "sass": "^1.63.6",
+        "stylelint": "^15.10.1",
+        "tailwindcss": "^3.3.2",
+        "typescript": "^5.1.6",
+        "vite": "^4.4.2",
+        "vite-plugin-vconsole": "^1.3.1",
+        "vite-tsconfig-paths": "^4.2.0"
+    }
+}

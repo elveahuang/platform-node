@@ -1,0 +1,6 @@
+.cache
+.strapi-updater.json
+auto-imports.d.ts
+components.d.ts
+build
+dist

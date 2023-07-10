@@ -1,0 +1,39 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Build
+        run: |
+          npm -v
+          npm install
+          npm run build:site:git
+          npm run build:cms:git
+          npm run build:builder:git
+      - name: Copy Assets
+        run: |
+          root=$(pwd)
+          mkdir -p ./dist/
+          mv ./site/dist/** ./dist/
+          mkdir -p ./dist/cms
+          mv ./cms/dist/** ./dist/cms/      
+          mkdir -p ./dist/builder
+          mv ./builder/dist/** ./dist/builder/
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: dist
+          force: true

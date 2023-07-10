@@ -1,0 +1,8 @@
+.DS_Store
+.strapi-updater.json
+wechat-info.json
+.cache
+.env
+*.log
+dist
+node_modules

@@ -1,0 +1,18 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tag_types",
+    "info": {
+        "singularName": "tag-type",
+        "pluralName": "tag-types",
+        "displayName": "Tag Type"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "code": {
+            "type": "string"
+        }
+    }
+}

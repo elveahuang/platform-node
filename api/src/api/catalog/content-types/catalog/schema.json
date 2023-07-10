@@ -1,0 +1,32 @@
+{
+    "kind": "collectionType",
+    "collectionName": "catalogs",
+    "info": {
+        "singularName": "catalog",
+        "pluralName": "catalogs",
+        "displayName": "Catalog",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "root": {
+            "type": "boolean",
+            "default": false,
+            "required": false
+        },
+        "catalog": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::catalog.catalog"
+        },
+        "content": {
+            "type": "richtext"
+        }
+    }
+}
